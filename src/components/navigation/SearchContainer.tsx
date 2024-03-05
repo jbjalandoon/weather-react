@@ -18,6 +18,7 @@ function SearchContainer(props: {
   cities: CityData[];
 }) {
   const { query, isLoading, setIsLoading, setQuery, setCities, cities } = props;
+
   useEffect(() => {
     const timeout = setTimeout(async () => {
       if (query) {
@@ -52,8 +53,6 @@ function SearchContainer(props: {
     return () => clearTimeout(timeout);
   }, [query, setIsLoading, setCities]);
 
-  console.log(import.meta.env.API_NINJA_KEY);
-
   async function fetchCities(query: string) {
     try {
       const url: string = `https://api.api-ninjas.com/v1/city?name=${query}&limit=5`;
@@ -65,11 +64,12 @@ function SearchContainer(props: {
       });
 
       if (!response.ok) {
-        throw new Error("Something went wrong");
+        throw new Error(response.statusText);
       }
 
       return await response.json();
     } catch (error) {
+      console.log(error);
       return [];
     }
   }

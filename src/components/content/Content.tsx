@@ -5,6 +5,7 @@ import ContentBody from "./chart/ContentBody";
 import { CityData } from "../navigation/SearchContainer";
 import ContentHeader from "./header/ContentHeader";
 import SideContent from "./side/SideContent";
+import Search from "../Search";
 
 export type CurrentForecastData = {
   data: {
@@ -159,16 +160,19 @@ function Content() {
   }, [country]);
 
   return (
-    <div className="content container">
-      <div className="content__main-forecast">
-        <ContentHeader
-          currentForecast={forecastData ? forecastData.current : null}
-        />
-        <ContentBody
-          hourlyForecast={forecastData ? forecastData.hourly : null}
-        />
+    <div className="content-main container">
+      <Search className={"search__main"} />
+      <div className="content">
+        <div className="content__main-forecast">
+          <ContentHeader
+            currentForecast={forecastData ? forecastData.current : null}
+          />
+          <ContentBody
+            hourlyForecast={forecastData ? forecastData.hourly : null}
+          />
+        </div>
+        <SideContent dailyForecast={forecastData ? forecastData.daily : null} />
       </div>
-      <SideContent dailyForecast={forecastData ? forecastData.daily : null} />
     </div>
   );
 }
