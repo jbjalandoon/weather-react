@@ -53,8 +53,8 @@ function Header() {
   }
 
   return (
-    <header className="header container">
-      <nav className="header__nav">
+    <header className="header">
+      <nav className="header__nav container">
         <NavLinks />
         <NavTitle />
         <NavActions />

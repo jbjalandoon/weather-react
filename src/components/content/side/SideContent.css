@@ -53,7 +53,8 @@
   }
 
   .content__side-forecast {
-    flex: 1;
+    width: auto;
+    flex: 0;
     flex-basis: 40%;
   }
 }

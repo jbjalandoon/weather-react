@@ -10,6 +10,7 @@
 .content__main-forecast {
   background-color: var(--color-violet);
   display: flex;
+  width: 100%;
   flex-direction: column;
   height: min-content;
   align-items: center;
@@ -37,6 +38,7 @@
   }
 
   .content__main-forecast {
+    width: 500px;
     flex: 3;
     flex-basis: 70%;
   }
@@ -46,11 +48,12 @@
 @media (min-width: 1200px) {
   .content {
     flex-direction: row;
+    justify-content: start;
     gap: 30px;
   }
 
   .content__main-forecast {
-    flex: 3;
+    flex: 0;
     flex-basis: 60%;
   }
 }
