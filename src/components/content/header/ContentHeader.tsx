@@ -1,4 +1,5 @@
 import { ThreeDots } from "react-loader-spinner";
+import weatherCodeJson from "../../../assets/weather.json";
 import useCountryContext from "../../../hooks/CountryHooks";
 import "./ContentHeader.css";
 import { CurrentForecastData } from "../Content";
@@ -22,7 +23,15 @@ function ContentHeader(props: { currentForecast: CurrentForecastData | null }) {
       </div>
       <div className="main-forecast__details">
         <div className="main-forecast__details-left">
-          <img src="https://files.readme.io/48b265b-weather_icon_small_ic_clear3x.png" />
+          {currentForecast !== null && (
+            <img
+              src={
+                weatherCodeJson[
+                  currentForecast.data.weatherCode.toString() as keyof typeof weatherCodeJson
+                ][currentForecast.data.isDay === 1 ? "day" : "night"].image
+              }
+            />
+          )}
           <span>
             {currentForecast !== null ? (
               `${currentForecast.data.temperatureAvg} ${currentForecast.units.temperatureAvg}`

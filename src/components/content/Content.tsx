@@ -15,6 +15,7 @@ export type CurrentForecastData = {
     windSpeed: number;
     relativeHumidity: number;
     cloudCover: number;
+    isDay: number;
   };
   units: {
     temperatureAvg: string;
@@ -76,7 +77,7 @@ function Content() {
   async function fetchForecast(country: CityData | null) {
     if (country !== null) {
       const { latitude, longitude } = country;
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,cloud_cover,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,cloud_cover,uv_index&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset&forecast_hours=24`;
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,is_day,relative_humidity_2m,apparent_temperature,weather_code,cloud_cover,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,cloud_cover,uv_index&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset&forecast_hours=24`;
       // const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,cloud_cover,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,cloud_cover,uv_index&forecast_days=1&forecast_hours=24`;
       const response = await fetch(url);
 
@@ -107,6 +108,7 @@ function Content() {
                 windSpeed: current.wind_speed_10m,
                 relativeHumidity: current.relative_humidity_2m,
                 cloudCover: current.cloud_cover,
+                isDay: currentUnits.is_day,
               },
               units: {
                 temperatureAvg: currentUnits.temperature_2m,
