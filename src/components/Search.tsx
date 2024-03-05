@@ -4,8 +4,6 @@ import SearchContainer, { CityData } from "./navigation/SearchContainer";
 import { useDebounce } from "@uidotdev/usehooks";
 
 function Search(props: { className: string | undefined }) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { className } = props;
 
   const [country, setCountry] = useState("");
   const [cities, setCities] = useState<CityData[] | []>([]);
