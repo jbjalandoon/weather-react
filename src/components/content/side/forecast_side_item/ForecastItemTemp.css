@@ -41,3 +41,9 @@
     text-align: left;
   }
 }
+@media (min-width: 1400px) {
+  .content__side-forecast-temp {
+    flex: 9;
+    text-align: center;
+  }
+}

@@ -56,6 +56,7 @@
 @media (min-width: 1200px) {
   .content-item__date {
     margin: 10px;
-    flex: 0 1 100px;
+    flex: 0 1 px;
   }
 }
+

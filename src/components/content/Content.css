@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 25px;
-  gap: 50px;
+  gap: 35px;
 }
 
 .content__main-forecast {
@@ -37,7 +37,7 @@
 
   .content__main-forecast {
     flex: 3;
-    flex-basis: 60%;
+    flex-basis: 70%;
   }
 }
 
