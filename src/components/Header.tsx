@@ -15,7 +15,7 @@ function Header() {
     const url = `https://api.api-ninjas.com/v1/reversegeocoding?lat=${lat}&lon=${long}`;
     const response = await fetch(url, {
       headers: {
-        "X-Api-Key": "FepNx2009aiODhuEpUeJuQ==eSNDaznaPlKYXeat",
+        "X-Api-Key": import.meta.env.VITE_API_NINJA_KEY,
       },
     });
 

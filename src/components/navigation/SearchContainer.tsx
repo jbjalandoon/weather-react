@@ -52,13 +52,15 @@ function SearchContainer(props: {
     return () => clearTimeout(timeout);
   }, [query, setIsLoading, setCities]);
 
+  console.log(import.meta.env.API_NINJA_KEY);
+
   async function fetchCities(query: string) {
     try {
       const url: string = `https://api.api-ninjas.com/v1/city?name=${query}&limit=5`;
 
       const response = await fetch(url, {
         headers: {
-          "X-Api-Key": "FepNx2009aiODhuEpUeJuQ==eSNDaznaPlKYXeat",
+          "X-Api-Key": import.meta.env.VITE_API_NINJA_KEY,
         },
       });
 
