@@ -1,0 +1,41 @@
+.search__list-item:nth-child(1) {
+  border-top: 1px solid black;
+}
+
+.search__list-item {
+  display: block;
+  border-bottom: 1px solid black;
+  padding: 15px 35px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+}
+
+.search__list-item:hover {
+  background-color: var(--color-slate400);
+  cursor: pointer;
+}
+
+.search__location {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.search__country {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.search__city {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.search__loading {
+  width: 100%;
+  padding: 15px;
+}

@@ -1,0 +1,39 @@
+.header__links {
+  display: none;
+  list-style-type: none;
+  gap: 1.5em;
+}
+
+.header__link a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+/* xs */
+@media (min-width: 320px) {
+  .header__links {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* sm */
+@media (min-width: 480px) {
+}
+
+/* md */
+@media (min-width: 768px) {
+  .header__links {
+    flex-direction: row;
+    gap: 2.5em;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+}
+
+/* xl */
+@media (min-width: 1200px) {
+}

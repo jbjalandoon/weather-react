@@ -1,0 +1,43 @@
+.content__side-forecast-temp {
+  flex: 2;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* xs */
+/* @media (min-width: 320px) {
+} */
+
+/* sm */
+@media (min-width: 480px) {
+  .content__side-forecast-temp {
+    flex: 9;
+    text-align: left;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .content__side-forecast-temp {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .content__side-forecast-temp {
+    text-align: center;
+  }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+  .content__side-forecast-temp {
+    flex: 9;
+    text-align: left;
+  }
+}

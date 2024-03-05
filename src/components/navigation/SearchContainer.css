@@ -1,0 +1,26 @@
+.search__container {
+  position: absolute;
+  display: none;
+  color: black;
+  /* top: auto; */
+  top: 100%;
+  width: 100%;
+  margin-top: 7px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 12px 12px 100px 5px rgba(0, 0, 0, 0.6);
+}
+
+.search__container.active {
+  display: block;
+}
+
+.search__list {
+  list-style: none;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px;
+  gap: 0px;
+}

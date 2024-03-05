@@ -1,0 +1,40 @@
+.content__side-forecast-img {
+  min-width: 100px;
+  min-height: 100px;
+}
+
+/* xs */
+/* @media (min-width: 320px) {
+} */
+
+/* sm */
+@media (min-width: 480px) {
+  .content__side-forecast-img {
+    flex: 0 1 100px;
+    place-self: center;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .content__side-forecast-img {
+    flex: 0 1 100px;
+    place-self: center;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .content__side-forecast-img {
+    flex: 0 1 100px;
+    place-self: start;
+  }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+  .content__side-forecast-img {
+    flex: 0 1 100px;
+    place-self: center;
+  }
+}
