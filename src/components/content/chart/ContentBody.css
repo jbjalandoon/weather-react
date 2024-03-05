@@ -11,9 +11,10 @@
 
 .main-forecast__chart-nav {
   display: none;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  gap: 30px;
+  gap: 5px;
 }
 
 .main-forecast__chart-nav > button {
@@ -28,6 +29,43 @@
   background-color: var(--color-marian-blue);
 }
 
-.main-forecast__chart {
-  width: 100px;
+.main-forecast__message {
+  width: 100%;
+  text-align: center;
 }
+
+.main-forecast__chart {
+  display: none !important;
+}
+
+/* xs */
+/* @media (min-width: 320px) {
+  
+} */
+
+/* sm */
+@media (min-width: 480px) {
+  .main-forecast__chart {
+    display: block !important;
+  }
+
+  .main-forecast__chart-nav {
+    display: flex;
+  }
+
+  .main-forecast__message {
+    display: none;
+  }
+}
+
+/* md */
+/* @media (min-width: 768px) {
+} */
+
+/* lg */
+/* @media (min-width: 1024px) {
+} */
+
+/* xl */
+/* @media (min-width: 1200px) {
+} */

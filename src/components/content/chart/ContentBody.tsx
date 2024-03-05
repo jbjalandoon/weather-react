@@ -77,7 +77,11 @@ function ContentBody(props: { hourlyForecast: HourlyForecastData | null }) {
           data={data}
           className="main-forecast__chart"
           updateMode="resize"
+          fallbackContent="Line graph can't load"
         />
+        <div className="main-forecast__message">
+          <p>graph look so bad in this screen (to be fixed)</p>
+        </div>
       </>
     );
   } else {
