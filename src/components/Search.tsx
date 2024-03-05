@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from "react";
 import SearchContainer, { CityData } from "./navigation/SearchContainer";
 import { useDebounce } from "@uidotdev/usehooks";
 
-function Search(props: { className: string | undefined }) {
+function Search() {
 
   const [country, setCountry] = useState("");
   const [cities, setCities] = useState<CityData[] | []>([]);

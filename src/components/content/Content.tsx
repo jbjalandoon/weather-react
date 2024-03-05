@@ -163,7 +163,7 @@ function Content() {
 
   return (
     <div className="content-main container">
-      <Search className={"search__main"} />
+      <Search />
       <div className="content">
         <div className="content__main-forecast">
           <ContentHeader
